@@ -6,7 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('repository', { path: 'repositories/:repository_id' }, function() { });
+  this.route('repositories', { path: '/'}, function() {
+    this.resource('repository', { path: 'repository/:repository_id' }, function() { });
+  });
 });
 
 export default Router;

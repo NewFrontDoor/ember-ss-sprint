@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function(id) {
-    return this.store.find('repository',id);
+  model: function() {
+    return this.store.find('repository');
   }
 });
