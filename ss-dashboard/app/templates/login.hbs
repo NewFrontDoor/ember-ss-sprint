@@ -4,6 +4,8 @@
     <label for="password">Password</label>
     {{input id='password' placeholder='Enter Password' class='form-control' type='password' value=password}}
     <button type="submit" class="btn btn-default">Login</button>
+    <a href="#" {{ action 'oauth' 'google' }}>Log in with Google</a>
+    <a href="#" {{ action 'oauth' 'facebook' }}>Log in with Facebook</a>
 </form>
 {{#if error}}
     <div class="alert alert-error">{{error.message}}</div>

@@ -1,7 +1,9 @@
 <div class="pull-right">
   {{#if user.authenticated}}
     <a href="#" {{ action 'logout' }}>Log out</a>
+    Welcome {{user.current.login}}!
   {{/if}}
+
 </div>
 <h2 id='title'>Welcome to the sparkleshare dashboard for.</h2>
 
