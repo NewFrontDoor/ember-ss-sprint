@@ -1,10 +1,18 @@
-<h3>List of Repositories Available</h3>
-<table class="table table-striped">
-  <tr><th>Name</th><th>Description</th></tr>
-{{#each model}}
-    <tr><th>{{#link-to 'repository' this}}{{id}}{{/link-to}}</th><td>{{description}}</td></tr>
-{{else}}
-  <tr><td colspan="2">No results found.</td></tr>
-{{/each}}
-</table>
-{{outlet}}
+{{#if user.authenticated}}
+<div class="row">
+  <div class="col-md-6">
+    <h3>List of Repositories Available</h3>
+    <table class="table table-striped">
+      <tr><th>Name</th><th>Description</th></tr>
+    {{#each model}}
+        <tr><th>{{#link-to 'repository' this}}{{id}}{{/link-to}}</th><td>{{description}}</td></tr>
+    {{else}}
+      <tr><td colspan="2">No results found.</td></tr>
+    {{/each}}
+    </table>
+  </div>
+  <div class="col-md-6">
+    {{outlet}}
+  </div>
+<div>
+{{/if}}

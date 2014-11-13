@@ -1,3 +1,11 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<div class="pull-right">
+  {{#if user.authenticated}}
+    <a href="#" {{ action 'logout' }}>Log out</a>
+  {{/if}}
+</div>
+<h2 id='title'>Welcome to the sparkleshare dashboard for.</h2>
 
-{{outlet}}
+<div class="container-fluid">
+  {{outlet}}
+</div>
+

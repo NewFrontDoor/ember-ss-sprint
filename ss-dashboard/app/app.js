@@ -5,6 +5,13 @@ import config from './config/environment';
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
+Ember.Application.initializer({
+    name: 'userapp',
+    initialize: function(container, application) {
+        Ember.UserApp.setup(application, { appId: '546477401b040', indexRoute: 'repositories' });
+    }
+});
+
 var App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
